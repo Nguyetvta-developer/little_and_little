@@ -143,7 +143,7 @@
                                         </div>
                                         <div class="form-group col-md-3 my-2 mx-3">
                                             <label class="text-dark pb-2" for="exampleFormControlSelect1">CVV/CVC</label>
-                                            <input type="number" min="1" class="form-control" name="CVV" id="inputAddress2" placeholder="...">
+                                            <input type="text" min="1" class="form-control" name="CVV" id="inputAddress2" placeholder="...">
                                             @error('CVV')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror

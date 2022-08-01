@@ -78,7 +78,7 @@
                                             <div class="form-group col-md-11 my-2 mx-3">
                                                 <select class="form-select" name="event_id" aria-label="Default select example">
                                                     @foreach ($event as $item)
-                                                     <option value="{{$item->id}}">{{$item->title}}</option>
+                                                        <option value="{{$item->id}}">{{$item->title}}</option>
                                                     @endforeach
                                                         
                                                 </select>
@@ -92,17 +92,17 @@
                                                 </div>
                                                 <div class="form-group mx-4 col-md-6">
                                                     <div class="date-wrap">
-                                                      <input name="hsd" class="form-control" type="date">
+                                                        <input name="hsd" class="form-control" type="date">
                                                             <div class="text-danger"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group my-2 mx-3">
-                                              <input type="text" class="form-control" value="" name="name" id="inputAddress" placeholder="Họ tên">
+                                                <input type="text" class="form-control" value="" name="name" id="inputAddress" placeholder="Họ tên">
                                                     <div class="text-danger"></div>
                                             </div>
                                             <div class="form-group my-2 mx-3">
-                                              <input type="text" class="form-control" value="" name="phone" id="inputAddress2" placeholder="Số điện thoại">
+                                                <input type="text" class="form-control" value="" name="phone" id="inputAddress2" placeholder="Số điện thoại">
                                                     <div class="text-danger"></div>
                                             </div>
                                             <div class="form-group my-2 mx-3">
@@ -115,7 +115,7 @@
                                                 bottom: -46px;
                                                 left: 100px;" alt="">
                                             </button>
-                                          </form>
+                                        </form>
                                     </div>
                                 </div>
                                 <img class="article-top-8" src="/img/18451 [Converted]-03 1.svg" alt="">

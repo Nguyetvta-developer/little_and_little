@@ -20,10 +20,12 @@ return new class extends Migration
             $table->string('img2',500);
             $table->string('title',30);
             $table->string('short_intro',300);
-            $table->string('description',200);
+            $table->string('content',200);
             $table->string('end_intro',200);
             $table->double('price');
             $table->string('address',20);
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }

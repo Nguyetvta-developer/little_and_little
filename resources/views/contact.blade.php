@@ -117,9 +117,9 @@
                                     <form  method="get" id="" >
                                         <div class="article-middle-bg-1 px-3 py-2">
                                             <div class="article-middle-dashed-1 px-4 py-3">
-                                                <p class="text-dark my-1 mx-3" style="text-align: justify;">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac mollis justo. Etiam volutpat tellus quis risus volutpat, ut posuere ex facilisis.
-                                                </p>
+                                                <h4 class="text-dark my-1 mx-3" style="text-align: justify;">
+                                                    Gửi phản hồi
+                                                </h4>
                                                 <img class="article-middle-5" src="/img/Alex_AR_Lay_Do shadow 1.svg" alt="">
         
                                                 <div class="form-row d-flex my-3 ">
@@ -236,7 +236,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./js/swiper.js"></script>
     <script>
-      function sendmail(){
+        function sendmail(){
         var name = $("#name").val();
         var email = $("#email").val();
         var phone = $("#phone").val();
@@ -255,8 +255,8 @@
                 }
             }).done(function (response) {
                 
-                 $("#show").empty();
-                 $("#show").html(response);
+                    $("#show").empty();
+                    $("#show").html(response);
             
             });
     }

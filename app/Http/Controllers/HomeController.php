@@ -33,13 +33,10 @@ class HomeController extends Controller
             'feed' => $data['feed'],
             
         ],function($mail) use ($data){
-            $mail->to('nguyentruongvi2203@gmail.com');
-            $mail->from('nguyentruongvi2203@gmail.com');
+            $mail->to('testmail7245@gmail.com');
+            $mail->from('testmail7245@gmail.com');
             $mail->subject('Liên hệ từ khách hàng');
         });
         return view('done');
     }
-
-   
-  
 }

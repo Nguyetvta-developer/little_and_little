@@ -59,47 +59,56 @@
                     </nav>
                 </div>
             </div>
-
-
-            <div class="firework article-main">
-                <div class="article-top">
-                    <div class="row">
-                        <div class="article-top-left col-sm-3">
-                            <img class="article-top-1" src="/img/flag-left.svg" alt="">
-                        </div>
-                        <div class="col-sm-6 d-flex justify-content-center align-items-center">
-                           <h1 class="mx-auto pt-6" style="font-weight:900; font-size:48px; width:fit-content;">{{$event->title}}</h1>
-                        </div>
-                        <div class="col-sm-3">
-                            <img class="article-top-3 pt-1" src="/img/flag-right.svg" alt="">
+            @foreach ($event as $event)
+                <div class="firework article-main">
+                    <div class="article-top">
+                        <div class="row">
+                            <div class="article-top-left col-sm-3">
+                                <img class="article-top-1" src="/img/flag-left.svg" alt="">
+                            </div>
+                            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                                <h1 class="mx-auto pt-6" style="font-weight:900; font-size:48px; width:fit-content;">
+                                    {{$event->title}}
+                                </h1>
+                            </div>
+                            <div class="col-sm-3">
+                                <img class="article-top-3 pt-1" src="/img/flag-right.svg" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="article-main">
-                    <div class="container">
-                        <div class="card article-middle-bg-2 p-2">
-                            <div class="row article-middle-dashed-1 px-3 py-4" style="height: 500px">
-                                <div class="col-sm-4 d-flex">
-                                    <div class="col-sm-12">
-                                        <img class="img-lg" src="{{$event->img}}" style="width: 100%;" alt="">
-                                        <div class="py-3" style="line-height: 45px">
-                                            <img src="/img/calendar.png" alt="">
-                                            <span class="text-dark">{{$event->start_date}} - {{$event->end_date}}</span>
-                                            <br>
-                                            <span class="card-text text-capitalize text-secondary">{{$event->address}}</span>
-                                            <h3 class="text-warning fw-bold">{{number_format($event->price)}} VND</h3>
+                    <div class="article-main">
+                        <div class="container">
+                            <div class="card article-middle-bg-2 p-2">
+                                <div class="row article-middle-dashed-1 px-3 py-4" style="height: 500px">
+                                    <div class="col-sm-3 d-flex">
+                                        <div class="col-sm-12">
+                                            <img class="img-lg" src="{{$event->img}}" style="width: 100%;" alt="">
+                                            <div class="py-3" style="line-height: 45px">
+                                                <img src="/img/calendar.png" alt="">
+                                                <span class="text-dark">{{date('d-m-Y', strtotime($event->start_date))}} - {{date('d-m-Y', strtotime($event->end_date))}}</span>
+                                                <br>
+                                                <span class="card-text text-capitalize text-secondary">{{$event->address}}</span>
+                                                <h3 class="text-warning fw-bold">{{number_format($event->price)}} VND</h3>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-8">
-                                    {!!$event->content!!}
+                                    <div class="col-md-3">
+                                        <p class="text-dark">{{$event->content}}</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img class="img-lg" src="{{$event->img1}}" style="width: 100%;" alt="">
+                                        <p class="text-dark">{{$event->short_intro}}</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="text-dark">{{$event->content}}</p>
+                                        <img class="img-lg" src="{{$event->img1}}" style="width: 100%;"  alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
+                </div>                           
+            @endforeach
         </div>
     </div>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

@@ -38,11 +38,7 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event=DB::table('event')
-        ->select('event.*')
-        ->where('id','=',$id)
-        ->first();
-
+        $event= Events::where('id', $id)->get();
         return view('event.show', compact('event'));
     }
 

@@ -1,1 +1,1 @@
- <p>Gửi liên hệ thành công Vui lòng kiên nhẫn đợi phản hồi từ chúng tôi bạn nhé</p><br>
+<p>Gửi liên hệ thành công! Chúng tôi sẽ sớm phẩn hồi cho quý khách!</p><br>

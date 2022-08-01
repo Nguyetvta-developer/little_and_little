@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class order extends Model
 {
     use HasFactory;
-    protected $table = '=order';
+    protected $table = 'order';
     protected $fillable = [
         
         'customer_name',
@@ -17,9 +17,7 @@ class order extends Model
         'totalQty',
         'totalPrice',
         'event_id',
-        'date'
-       
-        
+        'date'=> 'date:D-m-y',       
     ];
 
 }

@@ -80,26 +80,26 @@
                     <div class="container" style="width: 1300px;">
                         <div class="slider" id="slider">
                             <div class="slide" id="slide">
-                             @foreach($data as $item)
-                                <div class="col-sm-1 px-3">
-                                    <div class="card" style="border-radius: 10px;width:305px;height: 430px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
-                                        <img src="/img/sukien.png" alt="" style="border-radius: 10px; width:100%; height: 212px;">
-                                        <div class="card-body">
-                                            <h4 class="card-title text-capitalize text-dark">{{$item->title}}</h4>
-                                            <span class="card-text text-capitalize text-secondary">{{$item->address}}</span>
-                                            <br>
-                                            <img src="./img/calendar.png"/>
-                                            <span class="text-dark">{{$item->start_date}} - {{$item->end_date}}</span>
-                                            <h3 class="event-price">{{$item->price}} VNĐ</h3>
-                                            <br>
-                                            <a href="/show/{{$item->id}}" style="    position: absolute;
-                                                bottom: 10px;" class="btn px-0"><img src="/img/xem chi tiết btn.png" alt=""></a>
-                                        </div>
+                            @foreach($data as $item)
+                            <div class="col-sm-3 px-3">
+                                <div class="card" style="border-radius: 10px;width:305px;height: 430px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+                                    <img src="{{$item->img}}" alt="" style="border-radius: 10px; width:100%; height: 212px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-capitalize text-dark">{{$item->title}}</h4>
+                                        <span class="card-text text-capitalize text-secondary">{{$item->address}}</span>
+                                        <br>
+                                        <img src="./img/calendar.png"/>
+                                        <span class="text-dark">{{date('d-m-Y', strtotime($item->start_date))}} - {{date('d-m-Y', strtotime($item->end_date))}}</span>
+                                        <h3 class="event-price">{{$item->price}} VNĐ</h3>
+                                        <br>
+                                        <a href="/show/{{$item->id}}" style="position: absolute;
+                                            bottom: 10px;" class="btn px-0"><img src="/img/xem chi tiết btn.png" alt=""></a>
                                     </div>
                                 </div>
-                            @endforeach
                             </div>
-                          
+                        @endforeach
+                        </div>
+                        
                         </div>
                     </div> 
                 </div>   

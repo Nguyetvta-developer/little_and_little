@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class Ticket extends Seeder
 {
@@ -14,10 +15,10 @@ class Ticket extends Seeder
      */
     public function run()
     {
-        \DB::table('ticket') -> insert([
+        DB::table('ticket') -> insert([
             'img_name' => '',
             'start_date' =>	 '',
             'end_date' => ''
-        ])
+        ]);
     }
 }

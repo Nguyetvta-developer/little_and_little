@@ -10,7 +10,7 @@ class CheckoutController extends Controller
 {
     public function checkout(Request $request){
         $qty= 0;
-        $event=DB::table('event')
+        $event=DB::table('events')
         ->select('*')
         ->where('id',$request->event_id)
         ->first();
@@ -37,7 +37,7 @@ class CheckoutController extends Controller
             'date'=>$request->date,
 
         ]);};
-        $event=DB::table('event')
+        $event=DB::table('events')
         ->select('*')
         ->where('id',$request->event_id)
         ->first();
